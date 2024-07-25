@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+	<test thread-count="1" name="Test">
+		<classes>
+			<class name="Project.TC_1" />
+			<class name="Project.Test_2" />
+			<class name="Project.Test_3" />
+			<class name="Project.Test_4" />
+			<class name="Project.Test_5" />
+			<class name="Project.Test_6" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
