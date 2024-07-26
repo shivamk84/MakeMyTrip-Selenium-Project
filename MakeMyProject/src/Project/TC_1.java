@@ -18,12 +18,8 @@ public class TC_1 {
     @Test
     public void Isha_Test() throws Throwable {
       
-
-        WebDriver driver = new EdgeDriver();
-        
-        // Open home page
-        driver.get("https://www.makemytrip.com/");
-        driver.manage().window().maximize();
+    	WebDriver driver = CommonUtils.Calling_1();
+    	
         
         // Create an instance of WebDriverWait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

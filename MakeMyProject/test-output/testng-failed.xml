@@ -9,9 +9,14 @@
     <classes>
       <class name="Project.Test_4">
         <methods>
-          <include name="Test4"/>
+          <include name="Test_Rijul"/>
         </methods>
       </class> <!-- Project.Test_4 -->
+      <class name="Project.Test_2">
+        <methods>
+          <include name="test_Varun"/>
+        </methods>
+      </class> <!-- Project.Test_2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

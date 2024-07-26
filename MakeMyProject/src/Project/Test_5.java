@@ -1,14 +1,11 @@
 package Project;
 
-import java.time.Duration;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -23,17 +20,8 @@ public class Test_5 {
 	@Test
 	public void Bus_Mohit() throws Throwable {    
 		
-		// driver = CommonUtils.setSeleniumGrid();
+		WebDriver driver = CommonUtils.Calling_1();
 		
-        // Initialize WebDriver instance
-        WebDriver driver = new EdgeDriver();
-//        
-//        // Set implicit wait and maximize window
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-//
-//        // Navigate to MakeMyTrip website
-        driver.get("https://www.makemytrip.com/");
 		driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
 
 		driver.findElement(By.xpath("//ul[@class='makeFlex font12 headerIconsGap']/li[6]")).click();

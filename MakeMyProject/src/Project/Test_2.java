@@ -1,6 +1,5 @@
 package Project;
 
-import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -8,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -18,13 +16,10 @@ public class Test_2 {
     static String month = "September 2024";
     
   @Test
-  public void test_Varun() throws InterruptedException { 
+  public void test_Varun() throws Throwable { 
           
-        // TODO Auto-generated method stub
-        WebDriver driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.get("https://www.makemytrip.com/");
+        WebDriver driver = CommonUtils.Calling_1();
+	  	
         driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
         driver.findElement(By.xpath("(//a[@class='headerIcons makeFlex hrtlCenter column'])[2]")).click();
         

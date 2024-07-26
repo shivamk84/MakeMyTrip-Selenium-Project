@@ -45,18 +45,8 @@ public class Test_3 {
 	@Test
 	public void Test_Shivam() throws Throwable{
 		
-		//WebDriver driver = CommonUtils.setSeleniumGrid();
+		WebDriver driver = CommonUtils.Calling_1();
 		
-		WebDriver driver = new ChromeDriver();
-		
-		// get the URL
-		driver.get("https://www.makemytrip.com/");
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-		// Maximum window
-		driver.manage().window().maximize();
-	
 		// Close the login pop up
 		try {
 			driver.findElement(By.xpath("//span[@class='commonModal__close']")).click();
@@ -141,7 +131,7 @@ public class Test_3 {
 		
 		driver.findElement(By.xpath("//button[@id='search_button']")).click();
 		
-		
+		Thread.sleep(1000);
 
 		try {
 			driver.findElement(By.xpath("//span[@class='closeIcon']")).click();

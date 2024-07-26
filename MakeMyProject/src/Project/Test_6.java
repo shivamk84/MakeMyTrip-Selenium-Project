@@ -14,33 +14,20 @@ import org.testng.asserts.SoftAssert;
 
 public class Test_6 {
 	
-	WebDriver driver;
-	String Browser = "Chrome";
 	
 	@Test
 	public void Cabs_Gopal() throws Throwable{
 	
-		if (Browser.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
-		}
 		
-		else if (Browser.equalsIgnoreCase("Firefox")) {
-			driver = new FirefoxDriver();
-		}
-		
-		else if (Browser.equalsIgnoreCase("Edge")) {
-			driver = new EdgeDriver();
-		}
-		
-		// WebDriver driver = CommonUtils.setSeleniumGrid();
-		// WebDriver driver = new ChromeDriver();
+
 		Random rand = new Random();
 		int n = rand.nextInt(5000,10000);
 		int n1= rand.nextInt(1000,3000);
 		SoftAssert st=new SoftAssert();
-		driver.get("https://www.makemytrip.com/");//open browser
-		driver.manage().window().maximize();//open window in full screen
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		
+		WebDriver driver = CommonUtils.Calling_1();
+		
 		//Selecting the from location
 		//close popup
 		Thread.sleep(n);

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Project.Test_4" class="method navigator-link" hash-for-method="Test_Rijul">Test_Rijul</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Project.Test_2" class="method navigator-link" hash-for-method="test_Varun">test_Varun</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,17 +137,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Project.Test_4" class="method navigator-link" hash-for-method="Test_Rijul">Test_Rijul</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Project.Test_3" class="method navigator-link" hash-for-method="Test_Shivam">Test_Shivam</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Project.Test_2" class="method navigator-link" hash-for-method="test_Varun">test_Varun</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -143,9 +152,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Project.Test_4</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -154,10 +163,58 @@
                   <a name="Test_Rijul">
                   </a> <!-- Test_Rijul -->
                   <span class="method-name">Test_Rijul</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id=&apos;train_options_30-07-2024_0&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\VARUNM~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: any, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://9.113.178.57:4444/grid..., se:cdpVersion: 126.0.6478.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52049abdb8d3c8c50eea04318191dd54
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Project.Test_4.Test_Rijul(Test_4.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Project.Test_2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_Varun">
+                  </a> <!-- test_Varun -->
+                  <span class="method-name">test_Varun</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1131, -102)
+  (Session info: chrome=126.0.6478.185)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f158029766f5b52973efd31037fd2c23, clickElement {id=f.6294FCCDB1A5CB7F1EB69193FD08F49B.d.2ED320C304939BE2580F0C53A975E079.e.165}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\VARUNM~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54330}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: any, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://9.113.178.57:4444/grid..., se:cdpVersion: 126.0.6478.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on any (f158029766f5b52973efd31037fd2c23)] -&gt; xpath: //div[@class=&apos;hsw_inputBox travelFor&apos;]]
+Session ID: f158029766f5b52973efd31037fd2c23
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Project.Test_2.test_Varun(Test_2.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -199,21 +256,6 @@
                   <a name="Isha_Test">
                   </a> <!-- Isha_Test -->
                   <span class="method-name">Isha_Test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Project.Test_2</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_Varun">
-                  </a> <!-- test_Varun -->
-                  <span class="method-name">test_Varun</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -298,32 +340,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test_Shivam')
 data.setCell(0, 2, 'Project.Test_3')
-data.setCell(0, 3, 119514);
+data.setCell(0, 3, 175395);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Cabs_Gopal')
 data.setCell(1, 2, 'Project.Test_6')
-data.setCell(1, 3, 59334);
+data.setCell(1, 3, 58858);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test_Varun')
-data.setCell(2, 2, 'Project.Test_2')
-data.setCell(2, 3, 40886);
+data.setCell(2, 1, 'Bus_Mohit')
+data.setCell(2, 2, 'Project.Test_5')
+data.setCell(2, 3, 53777);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'Isha_Test')
 data.setCell(3, 2, 'Project.TC_1')
-data.setCell(3, 3, 39722);
+data.setCell(3, 3, 49958);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Bus_Mohit')
-data.setCell(4, 2, 'Project.Test_5')
-data.setCell(4, 3, 36096);
+data.setCell(4, 1, 'Test_Rijul')
+data.setCell(4, 2, 'Project.Test_4')
+data.setCell(4, 3, 21405);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Test_Rijul')
-data.setCell(5, 2, 'Project.Test_4')
-data.setCell(5, 3, 18678);
+data.setCell(5, 1, 'test_Varun')
+data.setCell(5, 2, 'Project.Test_2')
+data.setCell(5, 3, 21390);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -358,36 +400,40 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Project.Test_2</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test_Varun</span>
-                <span class="method-start">39722 ms</span>
+                <span class="method-start">49970 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Project.Test_3</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Test_Shivam</span>
-                <span class="method-start">80621 ms</span>
+                <span class="method-start">71369 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Project.Test_4</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Test_Rijul</span>
-                <span class="method-start">200135 ms</span>
+                <span class="method-start">246767 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Project.Test_5</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Bus_Mohit</span>
-                <span class="method-start">218843 ms</span>
+                <span class="method-start">268175 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Project.Test_6</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Cabs_Gopal</span>
-                <span class="method-start">254954 ms</span>
+                <span class="method-start">321954 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
